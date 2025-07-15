@@ -1,0 +1,191 @@
+/* BG Animation */
+
+:root {
+  --color-1: rgba(000, 000, 000, 0.07);
+  --color-2: rgba(255, 255, 255, 0.07);
+  --color-3: rgba(102, 102, 102, 0.07);
+  --color-4: rgba(204, 204, 204, 0.07);
+  --color-5: rgba(200, 0, 0, 0.5);
+  --color-6: rgba(226, 50, 104, 0.07);
+}
+
+body {
+  margin: 0;
+  overflow-y: auto;  /* Allow scrolling */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  height: 100%;
+  overflow-y: auto;
+}
+
+html::after {
+  content: "";
+  position: fixed;  /* Gengar stays fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("gengar-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -10;
+  opacity: 1;
+  pointer-events: none;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Eye Glow Overlay */
+  background-color: rgba(139, 0, 0, 0.8);  /* Dark red inner eye color */
+  
+  -webkit-mask-image: url("eye-glow.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  
+  mask-image: url("eye-glow.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  
+  opacity: 0.7;  /* Base glow */
+  animation: red-inner-glow 3s infinite ease-in-out;
+  z-index: -9;
+  pointer-events: none;
+}
+
+@keyframes red-inner-glow {
+  0% {
+    opacity: 0.3;  /* Dim glow */
+  }
+  50% {
+    opacity: 0.8;  /* Brighten to dark red */
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+
+
+/* Styling Fiks */
+.theme--dark.v-application {
+  background: transparent;
+}
+
+.menu-item-title {
+  color: #ff0000; /* Change to red (#ff0000) */
+}
+
+@font-face {
+  font-family: "Outage";
+  src: url("Outage.ttf");
+}
+
+@font-face {
+  font-family: 'Outage-Cut';
+  src: url('/server/files/config/.theme/fonts/Outage-Cut.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: "Titillium-Regular";
+  src: url("Titillium-Regular.otf");
+}
+
+@font-face {
+  font-family: "Titillium-Bold";
+  src: url("Titillium-Bold.otf");
+}
+
+@font-face {
+  font-family: 'Titillium-SemiBold';
+  src: url('/server/files/config/.theme/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: "Titillium-Thin";
+  src: url("Titillium-Thin.otf");
+}
+
+@font-face {
+  font-family: "Titillium-Light";
+  src: url("Titillium-Light.otf");
+}
+
+.consoleScrollContainer,
+.consoleTable {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.input,
+.v-text-field,
+.v-input__slot,
+.v-list-item__title,
+.menu-item-title,
+.cm-gutterElement,
+.cm-line,
+.v-btn__content,
+.v-list-item,
+.v-list-item--link,
+.theme--dark,
+.v-label,
+.v-application,
+.v-text-field,
+.console-message,
+.text-no-wrap,
+.v-card__text,
+.notranslate,
+.col,
+.v-input__slot,
+.console-message,
+.text--primary,
+.v-subheader,
+.v-text-field__slot,
+._tool-slider-subheader {
+  font-family: Titillium-Semibold;
+}
+
+.v-toolbar__title {
+  text-transform: uppercase;
+  font-family: Outage-Cut;
+}
+
+.editor-dialog {
+  background-color: rgba(0, 0, 0, 0.48) !important;
+  backdrop-filter: blur(10px);
+}
+
+.v-toolbar--flat,
+.cm-gutters,
+.cm-editor {
+  backdrop-filter: blur(0px);
+  background-color: transparent !important;
+}
+
+p.font-weight-medium.d-flex.align-center {
+  min-width: 50px;
+}
+
+.font-weight-medium.d-flex.align-center {
+  font-size: 0;
+}
+
+.font-weight-medium.d-flex.align-center::after {
+  content: "OH SHIT";
+  font-size: 16px;
+  display: inline-block;
+}
