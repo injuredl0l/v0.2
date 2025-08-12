@@ -1,0 +1,16 @@
+[include printer/*.cfg]
+[include printer/*/*.cfg]
+
+[include auto_backup/*.cfg]
+
+
+[include obico/*.cfg]
+
+[include print/*.cfg]
+
+[include ShakeTune_results/*.cfg]
+[include ShakeTune_results/*/*.cfg]
+
+[include macros/*.cfg]
+
+[include mainsail.cfg]
