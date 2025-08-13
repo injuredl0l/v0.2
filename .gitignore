@@ -43,3 +43,4 @@ secrets.env
 *.token
 *.key
 moonraker-obico.cfg
+moonraker-sql.db
