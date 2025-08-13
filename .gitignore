@@ -42,3 +42,4 @@ Thumbs.db
 secrets.env
 *.token
 *.key
+moonraker-obico.cfg
