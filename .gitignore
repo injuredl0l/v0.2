@@ -1,1 +1,44 @@
-ShakeTune_results/input_shaper.csv
+# Logs
+logs/
+*.log
+
+# Moonraker DB files
+*.db
+*.sqlite*
+
+# Auto backups & temporary files
+auto_backup/
+backups/
+
+# Timelapse images/videos (Mainsail/Fluidd)
+timelapse/
+timelapse_tmp/
+
+# Webcam snapshots / crowsnest temp files
+webcam/
+*.jpg
+*.png
+
+# ShakeTune and tuning output (keep summaries only)
+ShakeTune_results/raw/
+ShakeTune_results/*.csv
+ShakeTune_results/*.json
+!ShakeTune_results/README.md
+!ShakeTune_results/*.png
+
+# ------------------------------
+# Python / system junk
+# ------------------------------
+__pycache__/
+*.pyc
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Secrets / tokens
+# ------------------------------
+secrets.env
+*.token
+*.key
